@@ -46,6 +46,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.5'
+  gem 'active_record_query_trace'
 end
 
 group :development do
@@ -56,7 +57,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem 'active_record_query_trace'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'colorize'

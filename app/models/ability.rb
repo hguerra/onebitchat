@@ -20,7 +20,7 @@ class Ability
       end
 
       can [:create, :destroy], TeamUser do |t|
-        t.team.user_id == user.id
+        t.team.user_id == user.id || t.team.users.where(id: user.id).present?
       end
     end
   end

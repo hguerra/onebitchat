@@ -7,6 +7,11 @@
           <i class="material-icons" id="<%= @team.id %>">settings</i>
         </a>
       <% end %>
+      <% unless can? :destroy, @team %>
+        <a class="right team_icon leave_team" href="#">
+          <i class="material-icons" id="<%= current_user.id %>">settings</i>
+        </a>
+      <% end %>
     </div>
   </li>
   <li>
@@ -28,7 +33,7 @@
                            </a>
                           <% if can? :destroy, channel %>
                            <a class="right remove_channel" href="#" id="<%= channel.id %>">
-                           <i class="material-icons" id="<%= channel.id %>">settings</i>
+                            <i class="material-icons" id="<%= channel.id %>">settings</i>
                            </a>
                            <% end %>
                         </div>
